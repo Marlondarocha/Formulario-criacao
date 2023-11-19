@@ -23,10 +23,20 @@
             <label for="conta-admin"><input type="radio" name="conta" id="conta-admin" class="inline"> Administrativo</label>   
         </fieldset>
         <fieldset>
-            <legend>Carregar uma foto de perfil:</legend>
-            <label for="escolha-arquivo"><input type="file" name="escolha-arquivo" id="escolha-arquivo"></label> 
-            <label for="eidade">Coloque sua idade</label> 
+            <label for="arquivo-foto">Carregar uma foto de perfil: <input type="file" name="arquivo" id="arquivo-foto"></label> 
+            <label for="eidade">Coloque sua idade: <input type="number" name="idade" id="eidade"></label> 
+            <label for="opcoes">Como você ficou sabendo sobre nós: 
+                <select name="opcoes" id="opcoes">
+                    <option value="">(selecione um)</option>
+                    <option value="1">FreeCodeCamp News</option>
+                    <option value="2">FreeCodeCamp YouTube Channel</option>
+                    <option value="3">FreeCodeCamp Forúm</option>
+                    <option value="4">Outro</option>
+                </select>
+            </label>
+            <label for="bio">Forneça uma biografia: <textarea name="bio" id="bio" cols="30" rows="3" placeholder="Eu gosto de programar na praia..."></textarea></label>
         </fieldset>
+        <label for="termos-condicoes">Eu aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a> <input type="checkbox" name="termos-condicoes" id="termos-condicoes" required></label>
         <input type="submit" value="Enviar">
     </form>  
 </body>
