@@ -12,14 +12,20 @@
     <p>Por favor, preencher esse formulário com as informações requeridas</p> <!-- PARÁGRAFO -->
     <form method="post" action="https://register-demo.freecodecamp.org"> <!-- FORMULÁRIO -->
         <fieldset> <!-- SEPARAR OS CAMPOS -->
-            <label for="primeiro-nome">Digite seu nome: <input type="text" name="primeiro-nome" id="primeiro-nome"></label> <!-- LABEL: RÓTULO E INPUT: ENTRADA("DADOS") -->
-            <label for="sobrenome">Digite seu sobrenome: <input type="text" name="sobrenome" id="sobrenome"></label>
-            <label for="email">Digite seu emial: <input type="email" name="email" id="email"></label>
-            <label for="senha">Criar nova senha: <input type="password" name="senha" id="senha"></label>
+            <label for="primeiro-nome">Digite seu nome: <input type="text" name="primeiro-nome" id="primeiro-nome" required></label> <!-- LABEL: RÓTULO E INPUT: ENTRADA("DADOS") -->
+            <label for="sobrenome">Digite seu sobrenome: <input type="text" name="sobrenome" id="sobrenome" required></label>
+            <label for="email">Digite seu emial: <input type="email" name="email" id="email" required></label>
+            <label for="senha">Criar nova senha: <input type="password" name="senha" id="senha" pattern="[a-z0-{8,}]" required></label>
         </fieldset>
         <fieldset>
+            <legend>Tipo de conta(OBRIGATÓRIO)</legend>
+            <label for="conta-pessoal"><input type="radio" name="conta" id="conta-pessoal" class="inline" checked> Pessoal</label> <!-- NAME COM O MESMO VALOR PARA UMA SÓ OPÇÃO SER SELECIONADA -->
+            <label for="conta-admin"><input type="radio" name="conta" id="conta-admin" class="inline"> Administrativo</label>   
         </fieldset>
         <fieldset>
+            <legend>Carregar uma foto de perfil:</legend>
+            <label for="escolha-arquivo"><input type="file" name="escolha-arquivo" id="escolha-arquivo"></label> 
+            <label for="eidade">Coloque sua idade</label> 
         </fieldset>
         <input type="submit" value="Enviar">
     </form>  
